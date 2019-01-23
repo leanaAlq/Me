@@ -1,0 +1,313 @@
+* {
+  box-sizing: border-box;
+}
+a {
+  color: #4f3561;
+}
+a.view {
+  text-decoration: none;
+  padding: 3%;
+  color: rgb(255, 249, 249);
+  border: 1px solid rgb(255, 249, 249);
+  border-radius: 5px;
+}
+
+a.view:hover {
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.324);
+}
+body {
+  margin: 0;
+
+  background: #c0bcca;
+  font-family: "Poiret One", cursive;
+  color: #4f3561;
+}
+canvas {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+div.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  padding: 0 10%;
+  margin: 0 auto;
+}
+div.work:nth-of-type(odd) {
+  background: #caadc1;
+}
+p {
+  font-family: "Quicksand", sans-serif;
+}
+section {
+  width: 100%;
+
+  padding: 50px 10%;
+}
+section:nth-of-type(odd) {
+  background: rgba(255, 240, 245, 0.712);
+}
+h3 {
+  text-decoration: #b7d0d4 underline;
+}
+img {
+  max-width: 100%;
+  height: 300px;
+  width: 300px;
+  opacity: 1;
+}
+
+h1 {
+  display: inline;
+  color: #4f3561;
+}
+p.description {
+  padding: 5%;
+  margin: 0 auto;
+}
+p.status {
+  border: 1px solid #f3f3f369;
+  color: white;
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  background: rgba(255, 240, 245, 0.712);
+
+  padding: 2%;
+  font-size: 10px;
+}
+
+footer {
+  width: 100%;
+  padding: 50px 10%;
+  background: rgba(255, 240, 245, 0.712);
+}
+.qoute {
+  position: absolute;
+  width: 30%;
+  left: 10%;
+  bottom: 10%;
+  z-index: 4;
+  color: rgba(255, 240, 245, 0.712);
+}
+.qoute:hover {
+  animation-name: example;
+  animation-duration: 9s;
+}
+
+.work {
+  position: absolute;
+  width: 300px;
+  opacity: 1;
+  height: 300px;
+  z-index: 2;
+  display: flex;
+  background: #caadc1a2;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.git {
+  margin: 10px auto;
+}
+.git img {
+  margin: 0 auto;
+  width: 20px;
+  height: 20px;
+}
+
+.anchors {
+  position: fixed;
+  top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 5;
+}
+.anchors div {
+  color: rgb(255, 249, 249);
+
+  background: #4f3561;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+
+  margin: 7% auto;
+
+  margin-left: 10px;
+}
+.anchors a {
+  align-self: center;
+  margin: 5% auto;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(255, 249, 249);
+}
+.anchors div:hover {
+  animation-name: color_change;
+  animation-duration: 3s;
+
+  animation-direction: alternate;
+}
+
+.landing-page {
+  background-image: url("https://images.wallpaperscraft.com/image/sky_clouds_pink_92617_1280x720.jpg");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.doves {
+  position: absolute;
+  z-index: 10;
+  top: 500px;
+  left: 0px;
+}
+.doves:hover {
+  animation-name: fly;
+  animation-duration: 5s;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+@keyframes fly {
+  from {
+    top: 500px;
+    left: 0px;
+  }
+  to {
+    top: -50px;
+    left: 500px;
+  }
+}
+@keyframes example {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(360deg) scale(0);
+  }
+}
+@keyframes color_change {
+  from {
+    background-color: #4f3561;
+  }
+  to {
+    background-color: #caadc1;
+  }
+}
+.col-4 {
+  width: calc(100% / 12 * 4);
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .sm-col-12 {
+    width: 100%;
+  }
+  .landing-page {
+    font-size: 40px;
+
+    width: 100%;
+  }
+  h1 {
+    margin: 0 10%;
+  }
+}
+
+.col-6 {
+  width: 50%;
+  padding: 20px;
+}
+
+/* try */
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+
+/* Style the back side */
+.flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+}
+.contact {
+  display: flex;
+  flex-direction: row;
+  padding: 2% 15%;
+}
+
+.contact img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+/* try */
+.name {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+}
+.l,
+.e,
+.a,
+.n,
+.a {
+  font-size: 80px;
+  z-index: 7;
+  animation: name 3s ease 3s 1 normal forwards;
+}
+@keyframes name {
+  from {
+    margin: 0;
+  }
+  to {
+    margin: 1%;
+  }
+}
